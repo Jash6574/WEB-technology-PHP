@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container" style="padding: 0;">
+    <div style="background-color: rgb(0, 0, 0);padding-top: 0px;">
+      <header id="result_name"
+        style="font-size: 40px; font-weight: 300; color: rgba(250, 235, 215, 0.736);font-family: 'Times New Roman', serif;line-height: 1.7;text-transform: capitalize;">
+      </header>
+
+      <div class="subheadder" style="text-align: center; align-items: center">
+        <p>
+          <span id="result_phone" style="color: rgba(128, 128, 128, 0.912);"></span>
+          <span style="color: rgb(60, 60, 60)"> ||</span>
+          <span id="result_email" style="color: rgba(128, 128, 128, 0.912);"></span>
+        </p>
+      </div>
+
+      <div class="subheadder" style="text-align: center; align-items: center;color: rgba(128, 128, 128, 0.722);">
+        <p>
+          <span id="result_city"></span><span>, </span>
+          
+          <span id="result_state"></span><span> -</span>
+          <span id="result_pico"></span>
+        </p>
+      </div>
+
+      <br />
+    </div>
+
+    <div class="bodyContainer">
+      <div class="subcontainer">
+        <div class="about">
+          <h3 class="title">Summary</h3>
+          <ul>
+            <p id="result_about" class="titleDetails"></p>
+          </ul>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="about">
+          <h3 class="title">Career Objective</h3>
+          <p id="result_careerObjective" class="titleDetails"></p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="about">
+          <h3 class="title">Educational Qualifications</h3>
+          <p class="titleDetails">I am pursued/pursing <span id="result_degree"></span> from <span
+              id="result_degreePlace"></span></p>
+          <p class="titleDetails">I completed my HSC from <span id="result_hsc"></span></p>
+          <p class="titleDetails">I completed my HSC from <span id="result_ssc"></span></p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="about">
+          <h3 class="title">Experience</h3>
+          <p id="result_experience" class="titleDetails"></p>
+        </div>
+      </div>
+
+      <div class="horizontalContainer">
+        <br>
+        <div class="about">
+          <h3 class="title">Language</i></h3>
+          <p id="result_lang1" class="titleDetails"></p>
+          <p id="result_lang2" class="titleDetails"></p>
+          <p id="result_lang3" class="titleDetails"></p>
+        </div>
+
+        <br> 
+        <div class="about">
+          <h3 class="title">Hobby</i></h3>
+          <p id="result_hobby" class="titleDetails"></p>
+          
+        </div>
+
+        <br> 
+        <div class="about">
+          <h3 class="title">Skills</i></h3>
+          <p id="result_skill1" class="titleDetails"></p>
+          <p id="result_skill2" class="titleDetails"></p>
+          <p id="result_skill3" class="titleDetails"></p>
+          <p id="result_skill4" class="titleDetails"></p>
+          <p id="result_skill5" class="titleDetails"></p>
+          <p id="result_skill6" class="titleDetails"></p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("result_name").innerHTML =
+      localStorage.getItem("name_value");
+
+    document.getElementById("result_email").innerHTML =
+      localStorage.getItem("email_value");
+
+    document.getElementById("result_phone").innerHTML =
+      localStorage.getItem("phone_value");
+
+    document.getElementById("result_city").innerHTML =
+      localStorage.getItem("city_value");
+
+    document.getElementById("result_state").innerHTML =
+      localStorage.getItem("state_value");
+
+    document.getElementById("result_pico").innerHTML =
+      localStorage.getItem("pico_value");
+
+    document.getElementById("result_about").innerHTML =
+      localStorage.getItem("about_value");
+
+    document.getElementById("result_careerObjective").innerHTML =
+      localStorage.getItem("careerObjective_value");
+
+    document.getElementById("result_degree").innerHTML =
+      localStorage.getItem("degree_value");
+
+    document.getElementById("result_degreePlace").innerHTML =
+      localStorage.getItem("degreePlace_value");
+
+    document.getElementById("result_hsc").innerHTML =
+      localStorage.getItem("hsc_value");
+
+    document.getElementById("result_ssc").innerHTML =
+      localStorage.getItem("ssc_value");
+
+    document.getElementById("result_experience").innerHTML =
+      localStorage.getItem("experience_value");
+
+    document.getElementById("result_lang1").innerHTML =
+      localStorage.getItem("lang1_value");
+
+      document.getElementById("result_lang2").innerHTML =
+      localStorage.getItem("lang2_value");
+
+      document.getElementById("result_lang3").innerHTML =
+      localStorage.getItem("lang3_value");
+
+      document.getElementById("result_hobby").innerHTML =
+      localStorage.getItem("hobby_value");
+
+      document.getElementById("result_skill1").innerHTML =
+      localStorage.getItem("skill1_value");
+
+      document.getElementById("result_skill2").innerHTML =
+      localStorage.getItem("skill2_value");
+
+      document.getElementById("result_skill3").innerHTML =
+      localStorage.getItem("skill3_value");
+
+      document.getElementById("result_skill4").innerHTML =
+      localStorage.getItem("skill4_value");
+
+      document.getElementById("result_skill5").innerHTML =
+      localStorage.getItem("skill5_value");
+
+      document.getElementById("result_skill6").innerHTML =
+      localStorage.getItem("skill6_value");
+  </script>
+
+
+</body>
+
+</html>

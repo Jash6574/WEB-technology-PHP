@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Registration Form</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+
+<body>
+  <section class="container">
+    <header>Resume Builder</header>
+    <form id="form" method="post" action="second.html" class="form">
+
+
+      <div class="input-box">
+        <label>First Name</label>
+        <input type="text" id="name" name="Name" placeholder="Enter Your Name Name" />
+
+      </div>
+
+
+
+      <div class="column">
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="phone" id="phone" name="phoneNo" placeholder="Enter Phone Number" />
+        </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="email" id="email" name="emailAddress" placeholder="Enter Email Address" />
+        </div>
+      </div>
+
+      <!-- <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" id="bdate" name="birthDate" placeholder="Enter birth date"  />
+          </div> -->
+
+
+      <div class="column">
+        <div class="input-box">
+          <label>City</label>
+          <input type="text" id="city" name="city" placeholder="Enter Your City" />
+
+        </div>
+
+        <div class="input-box">
+          <label>State</label>
+          <input type="text" id="state" name="state" placeholder="Enter Your State" />
+
+        </div>
+
+        <div class="input-box">
+          <label>Pincode</label>
+          <input type="text" id="pico" name="pico" placeholder="Enter Your Pincode" />
+        </div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label>Hobby</label><br>
+        <div class="select-box">
+          <select name="hobby">
+            <option hidden>Select Your Hobby</option>
+            <option id="hobby">Cricket</option>
+            <option id="hobby">Watch Tv</option>
+            <option id="hobby">Play Game</option>
+            <option id="hobby">Reading</option>
+            <option>Internet Surfing</option>
+          </select>
+        </div>
+      </div>
+      <div>
+
+        <div class="input-box ">
+          <label>About Your Self</label><br>
+          <textarea class="input-box" id="about" name="about" type="text" rows="5"
+            placeholder="Enter Something About You"></textarea>
+        </div>
+
+        <div class="input-box ">
+          <label>Career Objective</label><br>
+          <textarea class="input-box" id="careerObjective" name="careerObjective" type="text" rows="5"
+            placeholder="Enter Your Career Objective"></textarea>
+        </div>
+
+        <div class="input-box ">
+          <label>Educational Qualifications</label><br>
+          <input type="text" id="degree" name="degree" placeholder="Ener your degree like B.A., B.Tech, MBA, etc.." />
+          <input type="text" id="degreePlace" name="degreePlace" placeholder="From Where are you pursing degree?" />
+          <input type="text" id="hsc" name="hsc" placeholder="From Where are you pass HSC" />
+          <input type="text" id="ssc" name="ssc" placeholder="From Where are you pass SSC" />
+        </div>
+
+        <div class="input-box ">
+          <label>Experience</label>
+          <textarea class="input-box" rows="5" type="text" id="experience" name="experience"
+            placeholder="Enter Your Experience"></textarea>
+        </div>
+
+        <div class="check-box" style="margin-top: 20px;">
+          <label>Language</label>
+          <div class="check-box-option">
+
+            <div class="check">
+              <input type="checkbox" id="lang1" value="Gujarati" name="lang">
+              <label for="Gujarati">Gujarati</label>
+
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="lang2" value="Hindi" name="lang">
+              <label for="Hindi" >Hindi</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="lang3" value="English" name="lang">
+              <label for="English">English</label>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+
+        <div class="check-box" style="margin-top: 20px;">
+          <label>Skills</label>
+          <div class="check-box-option">
+
+            <div class="check">
+              <input type="checkbox" id="skill1" value="HTML" name="skill">
+              <label for="HTML">HTML</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="skill2" value="CSS" name="skill">
+              <label for="CSS">CSS</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="skill3" value="JS" name="skill">
+              <label for="JS">JS</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="skill4" value="React" name="skill">
+              <label for="React">React</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="skill5" value="PHP" name="skill">
+              <label for="PHP">PHP</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="skill6" value="Flutter" name="skill">
+              <label for="Flutter">Flutter</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="column"><button onclick="button()">Show Your Resume</button>
+          <button onclick="print()">Print Your Resume</button></div>
+
+
+        <script>
+          function button() {
+            localStorage.clear();
+
+            var yes1 = document.getElementById("lang1");
+            if (yes1.checked == true) {
+              var lang1 = document.getElementById("lang1").value;
+              localStorage.setItem("lang1_value", lang1);
+            }
+
+            var yes2 = document.getElementById("lang2");
+            if (yes2.checked == true) {
+              var lang2 = document.getElementById("lang2").value;
+              localStorage.setItem("lang2_value", lang2);
+            }
+
+            var yes3 = document.getElementById("lang3");
+            if (yes3.checked == true) {
+              var lang3 = document.getElementById("lang3").value;
+              localStorage.setItem("lang3_value", lang3);
+            }
+
+
+            var yes4 = document.getElementById("skill1");
+            if (yes4.checked == true) {
+              var skill1 = document.getElementById("skill1").value;
+              localStorage.setItem("skill1_value", skill1);
+            }
+
+            var yes5 = document.getElementById("skill2");
+            if (yes5.checked == true) {
+              var skill2 = document.getElementById("skill2").value;
+              localStorage.setItem("skill2_value", skill2);
+            }
+            var yes6 = document.getElementById("skill3");
+            if (yes6.checked == true) {
+              var skill3 = document.getElementById("skill3").value;
+              localStorage.setItem("skill3_value", skill3);
+            }
+            var yes7 = document.getElementById("skill4");
+            if (yes7.checked == true) {
+              var skill4 = document.getElementById("skill4").value;
+              localStorage.setItem("skill4_value", skill4);
+            }
+            var yes8 = document.getElementById("skill5");
+            if (yes8.checked == true) {
+              var skill5 = document.getElementById("skill5").value;
+              localStorage.setItem("skill5_value", skill5);
+            }
+            var yes9 = document.getElementById("skill6");
+            if (yes6.checked == true) {
+              var skill6 = document.getElementById("skill6").value;
+              localStorage.setItem("skill6_value", skill6);
+            }
+
+
+            var name1 = document.getElementById("name").value;
+            localStorage.setItem("name_value", name1);
+
+            var phone = document.getElementById("phone").value;
+            localStorage.setItem("phone_value", phone);
+
+            var email = document.getElementById("email").value;
+            localStorage.setItem("email_value", email);
+
+            var city = document.getElementById("city").value;
+            localStorage.setItem("city_value", city);
+
+            var state = document.getElementById("state").value;
+            localStorage.setItem("state_value", state);
+
+            var pincode = document.getElementById("pico").value;
+            localStorage.setItem("pico_value", pincode);
+
+            var about = document.getElementById("about").value;
+            localStorage.setItem("about_value", about);
+
+            var degree = document.getElementById("degree").value;
+            localStorage.setItem("degree_value", degree);
+
+            var degreePlace = document.getElementById("degreePlace").value;
+            localStorage.setItem("degreePlace_value", degreePlace);
+
+            var hsc = document.getElementById("hsc").value;
+            localStorage.setItem("hsc_value", hsc);
+
+            var ssc = document.getElementById("ssc").value;
+            localStorage.setItem("ssc_value", ssc);
+
+            var careerObjective = document.getElementById("careerObjective").value;
+            localStorage.setItem("careerObjective_value", careerObjective);
+
+            var experience = document.getElementById("experience").value;
+            localStorage.setItem("experience_value", experience);
+
+            var hobby = document.getElementById("hobby").value;
+            localStorage.setItem("hobby_value", hobby);
+
+
+
+          }
+        </script>
+
+
+    </form>
+  </section>
+</body>
+
+
+
+</html>

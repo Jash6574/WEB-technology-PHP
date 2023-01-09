@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        
+        
+        
+        <p style="font-weight: bold;">First Name: <span style="font-weight:lighter" id="result_1"></span></p>
+        <p style="font-weight: bold;">Middle Name: <span style="font-weight:lighter" id="result_2"></span></p>
+        <p style="font-weight: bold;">Last Name: <span style="font-weight:lighter" id="result_3"></span></p>
+        <p style="font-weight: bold;">Phone No.: <span style="font-weight:lighter" id="result_4"></span></p>
+        <p style="font-weight: bold;">Email Address: <span style="font-weight:lighter" id="result_5"></span></p>
+        <p style="font-weight: bold;">Date of Birth: <span style="font-weight:lighter" id="result_6"></span></p>
+        <p style="font-weight: bold;">Gender: <span style="font-weight:lighter" id="result_7"></span></p>
+        <p style="font-weight: bold;">Address: <span style="font-weight:lighter" id="result_8"></span></p>
+        <p style="font-weight: bold;">Hobby: <span style="font-weight:lighter" id="result_9"></span></p>
+        
+        
+
+
+        <script>
+            document.getElementById("result_1").innerHTML=localStorage.getItem("name_value");
+            document.getElementById("result_2").innerHTML=localStorage.getItem("mname_value");
+            document.getElementById("result_3").innerHTML=localStorage.getItem("lname_value");
+            document.getElementById("result_4").innerHTML=localStorage.getItem("email_value");
+            document.getElementById("result_5").innerHTML=localStorage.getItem("phone_value");
+            document.getElementById("result_6").innerHTML=localStorage.getItem("bdate_value");
+            document.getElementById("result_7").innerHTML=localStorage.getItem("gender_value");
+            document.getElementById("result_8").innerHTML=localStorage.getItem("address_value");
+            document.getElementById("result_9").innerHTML=localStorage.getItem("hobby_value");
+
+        </script>
+        
+
+
+
+    </body>
+</html>
