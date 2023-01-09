@@ -32,6 +32,7 @@
          <a href="#" > <i class="fab fa-linkedin"></i> linkedin </a>
       </div>
 
+      
    </div>
 
    <div class="credit"> created by <span>Jashkumar D. Mavani</span> | all rights reserved! </div>

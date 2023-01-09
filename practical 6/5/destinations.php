@@ -27,4 +27,4 @@
 
 <?php
 require "footer.php";
-    
+?>
