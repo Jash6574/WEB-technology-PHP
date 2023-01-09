@@ -8,11 +8,11 @@
                 <a href="destinations.php">destinations</a>
                 <a href="contact.php">contact us</a>
             </nav>
-        </section>
+        </section>   
 
         <!-- <div class="img-text">
             <h1>Statue of Unity</h1>
             <h2>World’s tallest statue</h2>
-            <h3>Know More</h3>
+            <h3>Know More  </h3>
         </div> -->
     </div>
