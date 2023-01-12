@@ -3,20 +3,18 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link rel="stylesheet" href="css/style.css">
-    <div class="header-container" style="background: url(https://wallpapercave.com/wp/wp6587224.jpg);background-size:cover;height:100px" no-repeat;>
+    <!-- <div class="header-container" style="background: url(https://wallpapercave.com/wp/wp6587224.jpg);background-size:cover;height:100px" no-repeat;> -->
 
-<section class="header">
-    <a href="index.php" class="logo"><span style="font-weight:900;font-size:40px;color:white">T</span><span style="color:rgba(0, 0, 0, 0.616);font-weight: 600;">ravel.</span></a>
-    <nav class="navbar">
-        <a href="index.php">home</a>
-        <a href="about.php"  style="color:black;font-weight:900">about</a>
-        <a href="destinations.php">destinations</a>
-        <a href="contact.php">contact us</a>
-    </nav>
-
-    
-</section>
-</div>
+    <section class="header" style="background-color:azure">
+            <a href="index.php" class="logo"><span style="font-weight:900;font-size:40px;color:#4997cd">T</span><span style="color:rgba(0, 0, 0, 0.616);font-weight: 600;">ravel.</span></a>
+            <nav class="navbar">
+                <a href="index.php">home</a>
+                <a href="about.php" style="color:#4997cd;font-weight:900">about</a>
+                <a href="destinations.php">destinations</a>
+                <a href="contact.php">contact us</a>
+            </nav>
+        </section>
+<!-- </div> -->
 
 <div class=about-container>
     <h1>
@@ -40,5 +38,5 @@
 
 
 <?php
-require "footer.php";?>
+require "footer.php";
     
