@@ -13,10 +13,52 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Travel With Us</title>
 </head>
+<style>
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgba(241, 235, 235, 0.07);
+  backdrop-filter: blur(10px);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 32px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</style>
 <body>
 
-<div class="header-container" style="background: url('./img/winterbanner1.jpg');background-size:cover" no-repeat;>
-        <section class="header" style="background-color:azure">
+<div class="header-container" style="background: url('img/winterbanner1.jpg');background-size:cover;" no-repeat;>
+        <!-- <section class="header" style="background-color:azure">
             <a href="index.php" class="logo"><span style="font-weight:900;font-size:40px;color:#4997cd">T</span><span style="color:rgba(0, 0, 0, 0.616);font-weight: 600;">ravel.</span></a>
             <nav class="navbar">
                 <a href="index.php" style="color:#4997cd;font-weight:900">home</a>
@@ -24,27 +66,48 @@
                 <a href="destinations.php">destinations</a>
                 <a href="contact.php">contact us</a>
             </nav>
-        </section>
+        </section> -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Top Destinations</a>
+  <a href="#">Fair And Festivals</a>
+  <a href="#">See Gujarat As Your Interest</a>
+  <a href="#">Explore Gujarat</a>
+  <a href="#">See, Hear and Visit</a>
+</div><br>
+        <span style="font-size:30px;cursor:pointer;margin-left:25px;font-weight:800;color:aliceblue" onclick="openNav()">&#9776;</span>
 
-        <!-- <div class="img-text">
-            <h1>Statue of Unity</h1>
-            <h2>World’s tallest statue</h2>
-            <h3>Know More</h3>
-        </div> -->
     </div>
 
 
 
 <div class="discover-container">
-    <h1 style="margin-bottom:-20px">Explore</h1></div>
+    <h1 style="margin-bottom:-20px;color:white;text-shadow:4px 4px 1px black;">Explore</h1></div>
 <?php require "explore.php";
 ?>
+
+<div style="background-color:white">
+<?php require "destinations.php"
+?>
+</div>
+
+    <?php require "fair_festival.php" ?>
 
 
 <?php
 require "footer.php";       
 ?>
 
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "auto";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </body>
 

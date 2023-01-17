@@ -10,7 +10,7 @@
             <a href="index.php" class="logo"><span style="font-weight:900;font-size:40px;color:#4997cd">T</span><span style="color:rgba(0, 0, 0, 0.616);font-weight: 600;">ravel.</span></a>
             <nav class="navbar">
                 <a href="index.php">home</a>
-                <a href="about.php">about</a>
+                <!-- <a href="about.php">about</a> -->
                 <a href="destinations.php">destinations</a>
                 <a href="contact.php" style="color:#4997cd;font-weight:900">contact us</a>
             </nav>

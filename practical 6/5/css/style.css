@@ -1,5 +1,4 @@
 * {
-   font-family: 'Poppins';
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -18,6 +17,7 @@ html {
    /* background: url(https://wallpapercave.com/wp/wp6587224.jpg) no-repeat; */
    /* background-size: cover; */
    height: 100vh;
+   /* margin-top:-40px; */
 }
 
 
@@ -50,11 +50,15 @@ html {
 .header .navbar a {
    font-size: 2rem;
    padding-left: 2rem;
-   color:rgba(0, 0, 0, 0.653)
+   color:rgba(0, 0, 0, 0.653);
+   text-decoration: none;
+
 }
 
 .header .navbar a:hover {
    color: rgb(0, 0, 0);
+   text-decoration: none;
+
 }
 .img-text h1 {
    position: sticky;
