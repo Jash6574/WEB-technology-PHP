@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+  ?>
+   <script>
+    alert('Session Expired!!!')
+   </script>
+   <?php
+  header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +20,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link rel="stylesheet" href="css/style.css">
@@ -49,6 +63,20 @@
   margin-left: 50px;
 }
 
+span{
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 20px;
+  color:aliceblue;
+  transition: .3s;
+}
+span:hover{
+  transition: .3s;
+  color: black;
+  cursor: pointer;
+}
+
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -74,8 +102,13 @@
   <a href="#">See Gujarat As Your Interest</a>
   <a href="#">Explore Gujarat</a>
   <a href="#">See, Hear and Visit</a>
+  <a href="logout.php">Logout</a>
 </div><br>
-        <span style="font-size:30px;cursor:pointer;margin-left:25px;font-weight:800;color:aliceblue" onclick="openNav()">&#9776;</span>
+        <span onclick="openNav()">&#9776;</span>
+        <a href="#"><span>
+      <?php echo $_SESSION['username']; ?>
+      </span></a>
+        
 
     </div>
 
@@ -91,7 +124,21 @@
 ?>
 </div>
 
-    <?php require "fair_festival.php" ?>
+<div style="width:100vw;background-color:white">
+<div class="fair-container">
+<h1>Fair and Festivals</h1></div>
+<?php require "fair_festival.php" ?>
+<br><br><br><br><br>
+</div>
+
+<div style="width:100vw;background-color:white">
+<div class="fair-container">
+<h1>See Gujarat As Per Your Interest</h1></div>
+<?php 
+require "intereset.php"
+?>
+<br><br><br><br><br>
+</div>
 
 
 <?php

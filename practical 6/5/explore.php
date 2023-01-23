@@ -146,8 +146,8 @@ h1{
 }
 </style>
 </head>
-<body style=" background: rgb(0,0,36);
-background: linear-gradient(333deg, rgba(0,0,36,1) 0%, rgba(5,0,86,1) 28%, rgba(0,70,108,1) 53%, rgba(25,169,174,1) 100%);" no-repeat;>
+<body style="background: rgb(151,165,79);
+background: linear-gradient(45deg, rgba(0,125,0,1) 0%, rgba(0,0,84,1) 100%);" no-repeat;>
 
 <div class="timeline">
   <div class="container left">

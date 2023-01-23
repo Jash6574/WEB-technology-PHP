@@ -100,7 +100,6 @@ html {
    margin-bottom: 70px;
    font-weight: 900;
    opacity: 0.4;
-   
 }
 
 .imageGrid {
@@ -246,7 +245,22 @@ section{
    font-size: 18px;
 }
 
- 
+.fair-container {
+   /* padding-top: 70px; */
+   padding-bottom: 50px;
+   padding-left: 10%;
+   padding-right: 10%;
+   /* background-color: #2195f350; */
+}
+
+.fair-container h1 {
+   text-align: center;
+   font-size: 50px;
+   /* margin-bottom: 70px; */
+   font-weight: 900;
+   opacity: 0.4;
+} 
+
  
  @media (max-width: 1000px) {
    .imageGrid .tile {
