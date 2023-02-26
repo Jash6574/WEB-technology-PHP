@@ -1,3 +1,9 @@
+$uname_search = " select * from registrationtable where userName='$username' ";
+  $uname_query = mysqli_query($con, $uname_search);
+  $uname_pass = mysqli_fetch_assoc($uname_query);
+  $dbpass = $uname_pass['username'];
+  
+
 <?php
 session_start();
 
@@ -10,7 +16,7 @@ if (isset($_POST['login'])) {
   $password = $_POST['password'];
 
 
-  $email_search = " select * from registration  where email='$email' ";
+  $email_search = " select * from registrationtable where email='$email' ";
   $query = mysqli_query($con, $email_search);
 
   $email_count = mysqli_num_rows($query);
@@ -23,8 +29,16 @@ if (isset($_POST['login'])) {
 
     $pass_decode = password_verify($password, $dbpass);
 
+    // $isAdmin = "select * from registrationtable where isAdmin='1'";
+    // $getAdmin = mysqli_query($con, $isAdmin);
+    // $checkAdmin = mysqli_fetch_assoc($getAdmin);
+
     if ($pass_decode) {
-      header('location:index.php');
+      if ($checkAdmin == 1) {
+        header('location:admin.php');
+      } else {
+        header('location:index.php');
+      }
     } else {
 ?>
       <script>
@@ -32,15 +46,13 @@ if (isset($_POST['login'])) {
       </script>
     <?php
     }
-
-  }else {
+  } else {
     ?>
     <script>
       alert("ERROR: Email Invalid!!!\n Please register and then login")
     </script>
 <?php
   }
-
 }
 ?>
 

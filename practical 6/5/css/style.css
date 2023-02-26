@@ -103,12 +103,11 @@ html {
 }
 
 .imageGrid {
-   line-height: 0;
+   line-height: 1.2;
    overflow: hidden;
-
  }
  .imageGrid .tile {
-   width:33.33%;
+   width:33.187%;
    min-height:30em;
    line-height: 1.2;
    display:inline-block;

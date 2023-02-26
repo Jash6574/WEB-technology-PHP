@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -24,52 +25,22 @@
         </div> -->
     <!-- </div> -->
 
-    
+
+
 <div class="discover-container">
     <h1>Discover Top Destinations</h1>
 
     <div class="imageGrid">
-      <div class="tile" style="background-image: url('img/Dholavira15.jpg');">
-    <div class="textWrapper"><h2>Dholavira</h2>
-    </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/miyawakiplantation4.jpeg');">
-  <div class="textWrapper"><h2>Smritivan</h2>
-  </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/pavagadhtemplefrontview.jpg');">
-  <div class="textWrapper"><h2>Pavagadh Hill / Kali Mata Temple</h2>
-  </div>
-  </div>
-  <!--
---><div class="tile" style="background-image: url('img/Sasan-Banner.jpg');">
-  <div class="textWrapper"><h2>Gir National Park</h2>
-  </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/Rani Ki Vav29.jpg');">
-  <div class="textWrapper"><h2>Rani Ki Vaav</h2>
-  </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/Seema-Darshan-Banner.jpg');">
-  <div class="textWrapper"><h2>Seema Darshan - Nada Bet</h2>
-  </div>
-  </div>
-  <!--
---><div class="tile" style="background-image: url('img/Modhera-Sun-Temple-Home-Page-Thumbnail.jpg');">
-<div class="textWrapper"><h2>Modhera Sun Temple</h2>
-  </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/vadnagar-banner.jpg');">
-  <div class="textWrapper"><h2>Vadnagar</h2>
-  </div>
-  </div><!--
---><div class="tile" style="background-image: url('img/shrimadrajchandramorning.jpg');">
-  <div class="textWrapper"><h2>Shrimad Rajchandra Ashram</h2>
-  </div>
-  </div>
-  
+    <?php require "dholavira.php" ?>
+    <?php require "smritivan.php" ?>
+    <?php require "pavagadh.php" ?>
+    <?php require "gir.php" ?>
+    <?php require "ranikivaav.php" ?>
+    <?php require "seemadarshan.php" ?>
+    <?php require "modhera.php" ?>
+    <?php require "vadnagar.php" ?>
+    <?php require "asharam.php" ?>
   
   
 </div>
 </div>
-
