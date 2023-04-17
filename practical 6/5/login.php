@@ -1,10 +1,13 @@
-$uname_search = " select * from registrationtable where userName='$username' ";
+<!-- $uname_search = " select * from registrationtable where userName='$username' ";
   $uname_query = mysqli_query($con, $uname_search);
   $uname_pass = mysqli_fetch_assoc($uname_query);
   $dbpass = $uname_pass['username'];
-  
+   -->
 
 <?php
+
+error_reporting(0);
+
 session_start();
 
 
@@ -27,6 +30,7 @@ if (isset($_POST['login'])) {
 
     $_SESSION['username'] = $email_pass['userName'];
 
+
     $pass_decode = password_verify($password, $dbpass);
 
     // $isAdmin = "select * from registrationtable where isAdmin='1'";
@@ -34,7 +38,7 @@ if (isset($_POST['login'])) {
     // $checkAdmin = mysqli_fetch_assoc($getAdmin);
 
     if ($pass_decode) {
-      if ($checkAdmin == 1) {
+      if ($email_pass["isAdmin"] == 1) {
         header('location:admin.php');
       } else {
         header('location:index.php');
@@ -91,7 +95,6 @@ if (isset($_POST['login'])) {
 
 
         <center>
-          <a href="recover_email.php">Forgot Password</a>
 
 
           <a href="index.php"> <button type="submit" name="login">Login</button></a><br><br>

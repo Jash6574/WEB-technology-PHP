@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+
 session_start();
 
 if(!isset($_SESSION['username'])){
@@ -76,7 +78,27 @@ span:hover{
   cursor: pointer;
 }
 
-
+.Gujaratmap {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+  color:#ca4d0b;
+  font-size:24px;
+  font-weight:bolder;
+  opacity: 0.5;
+}
+.centered:hover{
+  opacity: 1;
+  font-size:44px;
+  transition: .3s;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -97,11 +119,11 @@ span:hover{
         </section> -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Top Destinations</a>
-  <a href="#">Fair And Festivals</a>
-  <a href="#">See Gujarat As Your Interest</a>
-  <a href="#">Explore Gujarat</a>
-  <a href="#">See, Hear and Visit</a>
+  <a href="#destinations">Top Destinations</a>
+  <a href="#fairandfestival">Fair And Festivals</a>
+  <a href="interest">See Gujarat As Your Interest</a>
+  <a href="gujarat">Explore Gujarat</a>
+  <!-- <a href="gujarat">See, Hear and Visit</a> -->
   <a href="logout.php">Logout</a>
 </div><br>
         <span onclick="openNav()">&#9776;</span>
@@ -119,24 +141,37 @@ span:hover{
 <?php require "explore.php";
 ?>
 
-<div style="background-color:white">
+<div id="destinations" style="background-color:white">
 <?php require "destinations.php"
 ?>
 </div>
 
-<div style="width:100vw;background-color:white">
+<div style="width:100vw;background-color:white" id="fairandfestival">
 <div class="fair-container">
 <h1>Fair and Festivals</h1></div>
 <?php require "fair_festival.php" ?>
 <br><br><br><br><br>
 </div>
 
-<div style="width:100vw;background-color:white">
+<div style="width:100vw;background-color:white" id="interest">
 <div class="fair-container">
 <h1>See Gujarat As Per Your Interest</h1></div>
 <?php 
 require "intereset.php"
 ?>
+<br><br><br>
+</div>
+
+
+<div style="width:100vw;background-color:white" id="gujarat">
+<div class="fair-container">
+<h1>Explore Gujarat</h1></div>
+<center class="Gujaratmap">
+<img src="img/gujarat.png"/>
+<a href="https://www.gujarattourism.com/">
+<h1 class="centered">Click Here</h1>
+</a>
+</center>
 <br><br><br><br><br>
 </div>
 

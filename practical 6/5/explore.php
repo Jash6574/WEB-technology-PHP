@@ -174,12 +174,6 @@ background: linear-gradient(45deg, rgba(0,125,0,1) 0%, rgba(0,0,84,1) 100%);" no
       
     </div>
   </div>
-  <div class="container left">
-    <div class="content">
-      <h1 >See, Hear and Visit</h1 >
-      
-    </div>
-  </div>
   
 </div>
 <br>

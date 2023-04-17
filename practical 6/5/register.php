@@ -1,12 +1,9 @@
 
 <?php
+error_reporting(0);
 
 session_start();
-
-
 include 'dbcon.php';
-
-
 if (isset($_POST['register'])){
   $username = mysqli_real_escape_string($con, $_POST['username']);
   $email = mysqli_real_escape_string($con,  $_POST['email']);
@@ -19,12 +16,10 @@ if (isset($_POST['register'])){
 
   $emailquery = "select * from registrationtable where email = '$email'";
   $query = mysqli_query($con, $emailquery);
-  
+
   $_SESSION['username'] = $email_pass['userName'];
 
-
   $emailcount = mysqli_num_rows($query);
-
   if($emailcount>0){
     ?>
           <script>
@@ -54,8 +49,6 @@ if (isset($_POST['register'])){
           </script>
           <?php
       }
-
-
     }else{
       ?>
           <script>
@@ -96,28 +89,39 @@ if (isset($_POST['register'])){
       <div class="input-box">
         <label>User Name</label>
         <input type="text" id="username" name="username" placeholder="Enter Your User Name" required />
+      </div>
 
+        <div class="column">
+        <div class="input-box">
         <label>Email id</label>
         <input type="email" id="email" name="email" placeholder="Enter Your Email Id" required />
+        </div>
 
+        <div class="input-box">
         <label>Phone Number</label>
         <input type="phone" id="phone" name="phone" required pattern="[1-9]{1}[0-9]{9}" placeholder="Enter Your Phone Number" />
+        </div>
+        </div>
 
+        
+        <div class="column">
+        <div class="input-box">
         <label>Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Your Password" required max="12" min="6" />
+        </div>
+        <div class="input-box">
 
         <label>Confirm Password</label>
         <input type="password" id="cpassword" name="cpassword" placeholder="Enter Confirm Password" required max="12" min="6" />
+      </div>
+      </div>
 
         <a href="login.php">
           <button type="submit" name="register">Register</button>
         </a><br><br>
 
-        <center>
           <p>Have an account? <a href="login.php">click here</a></p>
-        </center>
 
-      </div>
 
 
 

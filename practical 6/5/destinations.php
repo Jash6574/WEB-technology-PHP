@@ -6,40 +6,19 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-    <!-- <div class="header-container" style="background: url(https://wallpapercave.com/wp/wp6587224.jpg);height:100px" no-repeat;> -->
-
-    <!-- <section class="header" style="background-color:azure">
-            <a href="index.php" class="logo"><span style="font-weight:900;font-size:40px;color:#4997cd">T</span><span style="color:rgba(0, 0, 0, 0.616);font-weight: 600;">ravel.</span></a>
-            <nav class="navbar">
-                <a href="index.php">home</a>
-                <a href="about.php">about</a>
-                <a href="destinations.php" style="color:#4997cd;font-weight:900">destinations</a>
-                <a href="contact.php">contact us</a>
-            </nav>
-        </section> -->
-
-        <!-- <div class="img-text">
-            <h1>Statue of Unity</h1>
-            <h2>World’s tallest statue</h2>
-            <h3>Know More</h3>
-        </div> -->
-    <!-- </div> -->
-
-
-
 <div class="discover-container">
     <h1>Discover Top Destinations</h1>
 
     <div class="imageGrid">
-    <?php require "dholavira.php" ?>
-    <?php require "smritivan.php" ?>
-    <?php require "pavagadh.php" ?>
-    <?php require "gir.php" ?>
-    <?php require "ranikivaav.php" ?>
-    <?php require "seemadarshan.php" ?>
-    <?php require "modhera.php" ?>
-    <?php require "vadnagar.php" ?>
-    <?php require "asharam.php" ?>
+    <?php require "destinations/dholavira.php" ?>
+    <?php require "destinations/smritivan.php" ?>
+    <?php require "destinations/pavagadh.php" ?>
+    <?php require "destinations/gir.php" ?>
+    <?php require "destinations/ranikivaav.php" ?>
+    <?php require "destinations/seemadarshan.php" ?>
+    <?php require "destinations/modhera.php" ?>
+    <?php require "destinations/vadnagar.php" ?>
+    <?php require "destinations/asharam.php" ?>
   
   
 </div>
